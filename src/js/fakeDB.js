@@ -1,7 +1,7 @@
 // Import Data
-import INVOICES from '../../../data/invoices.json'
-import VENDORS from '../../../data/vendors.json'
-import PURCHASE_ORDERS from '../../../data/purchase-orders.json'
+import INVOICES from '../../data/invoices.json'
+import VENDORS from '../../data/vendors.json'
+import PURCHASE_ORDERS from '../../data/purchase-orders.json'
 
 // Build data objects
 export default {
