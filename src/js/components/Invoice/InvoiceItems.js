@@ -2,7 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 
 // Import Components
-import { Currency } from '../Currency'
+import { NumberFormat } from '../NumberFormat'
 
 export function InvoiceItems({ invoices }) {
   const { id } = useParams()
@@ -22,12 +22,12 @@ export function InvoiceItems({ invoices }) {
         <td>{item.upc}</td>
         <td>{item.description}</td>
         <td>
-          <Currency value={item.cogs} />
+          <NumberFormat currency value={item.cogs} />
         </td>
         <td>{item.quantity}</td>
         <td>{item.unit_of_measure}</td>
         <td>
-          <Currency value={item.cogs * item.quantity} />
+          <NumberFormat currency value={item.cogs * item.quantity} />
         </td>
       </tr>
     )
@@ -55,15 +55,15 @@ export function InvoiceItems({ invoices }) {
         <section>
           <h2>Line Item Details</h2>
           <p>
-            <span>Charged Invoice Amount</span>: <Currency value={invoice.total_amount} />
+            <span>Charged Invoice Amount</span>: <NumberFormat currency value={invoice.total_amount} />
           </p>
           <p>
             <span>Calculated Invoice Amount</span>:{' '}
-            <Currency value={items.reduce((total, item) => total + item.cogs * item.quantity, 0)} />
+            <NumberFormat currency value={items.reduce((total, item) => total + item.cogs * item.quantity, 0)} />
           </p>
           <p>
             <span>Total Units on Invoice</span>:{' '}
-            {Number(items.reduce((total, item) => total + item.quantity, 0)).toLocaleString('en-US')}
+            <NumberFormat value={items.reduce((total, item) => total + item.quantity, 0)} />
           </p>
           <table>
             <thead>

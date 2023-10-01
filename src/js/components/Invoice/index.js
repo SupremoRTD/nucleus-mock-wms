@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 // Import Components
-import { Currency } from '../Currency'
+import { NumberFormat } from '../NumberFormat'
 import { InvoiceItems } from './InvoiceItems'
 
 function Invoices({ invoices }) {
@@ -17,7 +17,7 @@ function Invoices({ invoices }) {
         <td>{invoice.vendor_invoice_number}</td>
         <td>{invoice.purchase_order.po_number}</td>
         <td>
-          <Currency value={invoice.total_amount} />
+          <NumberFormat currency value={invoice.total_amount} />
         </td>
         <td>{invoice.status}</td>
         <td>
