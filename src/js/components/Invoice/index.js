@@ -1,19 +1,32 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-// Import Components
-import { NumberFormat } from '../NumberFormat'
+// Custom Imports
+import { NumberFormat, useQuery } from '../utils'
 import { InvoiceItems } from './InvoiceItems'
 
 function Invoices({ invoices }) {
   const rows = []
 
   invoices.forEach(invoice => {
+    // Filter results if there's a query param
+    const vendor = useQuery().get('vendor')
+
+    if (vendor) {
+      if (invoice.vendor.id != vendor) {
+        return
+      }
+    }
+
     // Generate invoice detail rows
     rows.push(
       <tr key={invoice.id}>
         <td>{invoice.id}</td>
-        <td>{invoice.vendor.name}</td>
+        <td>
+          <Link to={`/vendors/${invoice.vendor.id}`}>
+            {invoice.vendor.name}
+          </Link>
+        </td>
         <td>{invoice.vendor_invoice_number}</td>
         <td>{invoice.purchase_order.po_number}</td>
         <td>

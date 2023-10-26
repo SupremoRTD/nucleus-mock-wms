@@ -71,13 +71,22 @@ h2 {
   text-transform: uppercase;
 }
 
+h3 {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 1.2em;
+  font-weight: 100;
+  color: #737373;
+  margin: 20px 0px;
+  text-transform: uppercase;
+}
+
 main {
   padding: 50px;
   padding-top: 0px;
   margin-top: 90px;
 }
 
-main > section {
+main>section {
   background-color: var(--default1);
   padding: 40px;
   border-radius: 5px;
@@ -192,6 +201,10 @@ header nav ul li:nth-child(1) a::before {
 }
 
 header nav ul li:nth-child(2) a::before {
+  content: '\e533';
+}
+
+header nav ul li:nth-child(3) a::before {
   content: '\f571';
 }
 
@@ -246,7 +259,7 @@ header nav ul li a:hover,
   margin-top: 20px;
 }
 
-#invoice-items p > span {
+#invoice-items p>span {
   font-weight: bold;
   color: var(--swatch5);
 }
@@ -255,6 +268,7 @@ header nav ul li a:hover,
 
 /********** Smartphones & Smaller Devices **********/
 @media screen and (max-width: 767px) {
+
   /* Element Styling */
   main {
     padding: 10px;
@@ -262,7 +276,7 @@ header nav ul li a:hover,
     font-size: 1.3rem;
   }
 
-  main > section {
+  main>section {
     padding: 10px;
   }
 
@@ -351,21 +365,27 @@ header nav ul li a:hover,
   #invoices td:nth-of-type(1):before {
     content: 'ID';
   }
+
   #invoices td:nth-of-type(2):before {
     content: 'Vendor';
   }
+
   #invoices td:nth-of-type(3):before {
     content: 'Invoice #';
   }
+
   #invoices td:nth-of-type(4):before {
     content: 'Purchase Order #';
   }
+
   #invoices td:nth-of-type(5):before {
     content: 'Invoice Amount';
   }
+
   #invoices td:nth-of-type(6):before {
     content: 'Status';
   }
+
   #invoices td:nth-of-type(7):before {
     content: '';
   }
@@ -374,23 +394,54 @@ header nav ul li a:hover,
   #invoice-items td:nth-of-type(1):before {
     content: 'Vendor SKU';
   }
+
   #invoice-items td:nth-of-type(2):before {
     content: 'UPC';
   }
+
   #invoice-items td:nth-of-type(3):before {
     content: 'Description';
   }
+
   #invoice-items td:nth-of-type(4):before {
     content: 'COGS';
   }
+
   #invoice-items td:nth-of-type(5):before {
     content: 'Quantity';
   }
+
   #invoice-items td:nth-of-type(6):before {
     content: 'UOM';
   }
+
   #invoice-items td:nth-of-type(7):before {
     content: 'Total COGS';
+  }
+
+  /* Vendor Styling */
+  #vendors td:nth-of-type(1):before {
+    content: 'ID';
+  }
+
+  #vendors td:nth-of-type(2):before {
+    content: 'Name';
+  }
+
+  #vendors td:nth-of-type(3):before {
+    content: 'Abbr.';
+  }
+
+  #vendors td:nth-of-type(4):before {
+    content: 'Address';
+  }
+
+  #vendors td:nth-of-type(5):before {
+    content: 'Contact';
+  }
+
+  #vendors td:nth-of-type(6):before {
+    content: 'Active Status';
   }
 }
 
@@ -401,7 +452,7 @@ header nav ul li a:hover,
     margin-top: 60px;
   }
 
-  main > section {
+  main>section {
     padding: 20px;
   }
 

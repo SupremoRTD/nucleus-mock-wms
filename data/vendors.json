@@ -6,15 +6,41 @@
     "po_contact_first_name": "Mr.",
     "po_contact_last_name": "Active",
     "po_contact_email": "mr.active@arcteryx.com",
-    "status": "active"
+    "po_contact_phone1_type": "Fax",
+    "po_contact_phone1": 4152369875,
+    "po_contact_phone2_type": "",
+    "po_contact_phone2": "",
+    "status": "active",
+    "address_line_1": "25146",
+    "address_line_2": "Suite 25",
+    "address_city": "Ameristreet",
+    "address_state": "CA",
+    "address_zipcode": "95857",
+    "address_country": "US",
+    "client": {
+      "id": 42
+    }
   },
   {
     "id": 789,
     "name": "Frontier Co-op",
     "abbreviation": "COOP",
-    "po_contact_first_name": "",
-    "po_contact_last_name": "",
-    "po_contact_email": "",
-    "status": "active"
+    "po_contact_first_name": "Mrs.",
+    "po_contact_last_name": "Coop",
+    "po_contact_email": "mrs.coop@frontiercoop.com",
+    "po_contact_phone1_type": "Main",
+    "po_contact_phone1": 5227856958,
+    "po_contact_phone2_type": "",
+    "po_contact_phone2": "",
+    "status": "inactive",
+    "address_line_1": "52478",
+    "address_line_2": "#1",
+    "address_city": "Blvdstreet St.",
+    "address_state": "CA",
+    "address_zipcode": "91191",
+    "address_country": "US",
+    "client": {
+      "id": 82
+    }
   }
 ]

@@ -1,8 +1,8 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 
-// Import Components
-import { NumberFormat } from '../NumberFormat'
+// Custom Imports
+import { NumberFormat } from '../utils'
 
 export function InvoiceItems({ invoices }) {
   const { id } = useParams()
@@ -51,6 +51,14 @@ export function InvoiceItems({ invoices }) {
           <p>
             <span>Contact</span>: {invoice.vendor.email}
           </p>
+          <h3>Shipped From</h3>
+          <p>{invoice.vendor.ship_address_line_1}</p>
+          <p>{invoice.vendor.ship_address_line_2}</p>
+          <p>
+            {`${invoice.vendor.ship_address_city}, `}
+            {invoice.vendor.ship_address_state} {invoice.vendor.ship_address_zipcode}
+          </p>
+          <p>{invoice.vendor.ship_address_count6ry}</p>
         </section>
         <section>
           <h2>Line Item Details</h2>
