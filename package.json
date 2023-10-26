@@ -1,5 +1,5 @@
 {
-  "name": "nucleus-amz-fba-wms",
+  "name": "nucleus-mock-wms",
   "version": "1.0.0",
   "description": "Amazon FBA Warehouse Management System",
   "scripts": {
