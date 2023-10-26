@@ -1,13 +1,19 @@
 import React from 'react'
 import { Link, useParams } from 'react-router-dom'
 
+// Custom Imports
+import { NoMatch } from '../App/NoMatch'
+
 function Vendors({ vendors }) {
   const { id } = useParams()
   const rows = []
 
-  if (id) {
+  if(id) {
     vendors = vendors.filter(vendor => vendor.id == id)
   }
+
+  // Return error if vendors are empty
+  if(vendors.length === 0) return <NoMatch />
 
   vendors.forEach(vendor => {
     // Generate invoice detail rows

@@ -4,20 +4,21 @@ import { Link } from 'react-router-dom'
 // Custom Imports
 import { NumberFormat, useQuery } from '../utils'
 import { InvoiceItems } from './InvoiceItems'
+import { NoMatch } from '../App/NoMatch'
 
 function Invoices({ invoices }) {
   const rows = []
 
+  // Filter results if there's a query param
+  const vendor = useQuery().get('vendor')
+
+  if(vendor) {
+    invoices = invoices.filter(invoice => invoice.vendor.id == vendor)
+    // Return error if invoices are empty
+    if(invoices.length === 0) return <NoMatch />
+  }
+
   invoices.forEach(invoice => {
-    // Filter results if there's a query param
-    const vendor = useQuery().get('vendor')
-
-    if (vendor) {
-      if (invoice.vendor.id != vendor) {
-        return
-      }
-    }
-
     // Generate invoice detail rows
     rows.push(
       <tr key={invoice.id}>

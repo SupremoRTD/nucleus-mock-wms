@@ -2,6 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 
 // Custom Imports
+import { NoMatch } from '../App/NoMatch'
 import { NumberFormat } from '../utils'
 
 export function InvoiceItems({ invoices }) {
@@ -14,6 +15,9 @@ export function InvoiceItems({ invoices }) {
   }, {})
   const items = invoice.vendor_invoice_items
   const rows = []
+
+  // Return error if items are empty
+  if(!items) return <NoMatch />
 
   items.forEach(item => {
     rows.push(
