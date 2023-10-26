@@ -6,7 +6,7 @@ export function Home() {
     <main id='home'>
       <section>
         <h1>
-          Welcome to <span>Nucleus</span>, the Amazon FBA WMS
+          Welcome to <span>Nucleus</span> <span>Mock</span> the Amazon FBA WMS
         </h1>
       </section>
     </main>

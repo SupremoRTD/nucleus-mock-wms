@@ -7,7 +7,7 @@ export function Layout() {
     <>
       <header>
         <img src='../images/logo.png' />
-        <h1>Nucleus</h1>
+        <h1>Nucleus <span>Mock</span></h1>
         <nav>
           <ul>
             <li>

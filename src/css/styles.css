@@ -9,12 +9,18 @@
   --swatch3: #508991;
   --swatch4: #74b3ce;
   --swatch5: #09bc8a;
+  --swatch6: #d3d300;
   --fa-font-solid: 'Font Awesome 6 Free';
 }
 
 @font-face {
   font-family: Nucleus;
   src: url('../fonts/Nucleus.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Lectric;
+  src: url('../fonts/Lectric.otf') format('opentype');
 }
 
 * {
@@ -154,8 +160,8 @@ header {
 header img {
   position: absolute;
   height: 30px;
-  top: 23px;
-  left: 170px;
+  top: 25px;
+  left: 222px;
   transform: rotate(210deg);
 }
 
@@ -166,6 +172,18 @@ header h1 {
   font-weight: normal;
   margin-top: 2px;
   margin-bottom: -14px;
+  transform: rotate(-1deg);
+  text-transform: none;
+  padding-right: 125px;
+}
+
+header h1 span {
+  position: absolute;
+  color: var(--swatch6);
+  font-family: Lectric, sans-serif;
+  text-shadow: 0px 4px var(--default2);
+  font-size: 6rem;
+  font-weight: normal;
   transform: rotate(-1deg);
   text-transform: none;
 }
@@ -241,6 +259,18 @@ header nav ul li a:hover,
   color: var(--default2);
   font-family: Nucleus, sans-serif;
   text-shadow: 0px 3px var(--swatch3);
+  font-size: clamp(3rem, 5vw, 6.5rem);
+  font-weight: normal;
+  margin-left: 5px;
+  transform: rotate(-1deg);
+  text-transform: none;
+}
+
+#home h1 span:nth-child(2) {
+  display: inline-block;
+  color: var(--swatch6);
+  font-family: Lectric, sans-serif;
+  text-shadow: 0px 3px var(--default2);
   font-size: clamp(3rem, 5vw, 6.5rem);
   font-weight: normal;
   margin-left: 5px;
