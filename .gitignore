@@ -1,6 +1,5 @@
 .vscode
 data/sql-queries
 node_modules
-package-lock.json
 public
 dist
