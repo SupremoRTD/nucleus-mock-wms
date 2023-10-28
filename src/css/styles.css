@@ -149,6 +149,7 @@ a:hover {
 header {
   position: fixed;
   width: 100%;
+  min-width: 400px;
   top: 0;
   display: flex;
   color: var(--default1);
@@ -249,6 +250,27 @@ header nav ul li a:hover,
   text-shadow: 0px 2px var(--default2);
   border-bottom: 3px solid var(--default1);
   padding-top: 3px;
+}
+
+header #github-logo {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin-left: 10px
+}
+
+header #github-logo img {
+  position: static;
+  background-color: var(--default1);
+  transform: rotate(0deg);
+  border-radius: 10%;
+}
+
+header #github-logo a:hover {
+  border-bottom: 0px;
+  box-shadow: 0px 0px 40px 0px
 }
 
 /********** Home Component **********/
