@@ -111,6 +111,21 @@ export function OrderItems({ orders }) {
             {order.order_details[0].client.ship_from_state} {order.order_details[0].client.ship_from_zipcode}
           </p>
           <p>{order.order_details[0].client.ship_from_country}</p>
+          <h3>Item Availability Data</h3>
+          <p>
+            <span>Total Products Ordered</span>: {order.order_details.length}
+          </p>
+          <p>
+            <span>Total Available Products</span>: {order.available_products.length}
+          </p>
+          <p>
+            <span>Total Unavailable Products</span>: {order.unavailable_products.length}
+          </p>
+          <p>
+            <span>Product Availability Rate</span>: {
+              `${((order.available_products.length / order.order_details.length) * 100).toFixed(2)}%`
+            }
+          </p>
         </section>
         {available_products.length > 0 &&
           table('Available Products', available_products)
