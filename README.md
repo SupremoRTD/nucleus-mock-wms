@@ -29,3 +29,10 @@ This WMS help manage inventory ordered specifically for Amazon FBA, stored withi
 
 - Invoice Items component
     - Displays invoice information for a specific invoice
+
+- Orders component
+    - Displays top level summary for all orders
+    - Links to order details
+
+- Order Details component
+    - Displays detailed information for a specifed order
