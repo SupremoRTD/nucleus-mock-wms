@@ -64,9 +64,9 @@ export function OrderItems({ orders }) {
         <td>{item.units_per_case}</td>
         <td>
           <NumberFormat currency value={
-            item.order_each !== 0 ? 
-            item.cogs_each * item.order_each :
-            item.cogs_each * (item.order_case * item.units_per_case)
+            item.order_each !== 0
+            ? item.cogs_each * item.order_each
+            : item.cogs_each * (item.order_case * item.units_per_case)
           } />
         </td>
       </tr>
@@ -97,7 +97,7 @@ export function OrderItems({ orders }) {
             <span>Updated At</span>: <DateFormat value={order.updated_at} />
           </p>
           <p>
-            <span>Conversion Rate</span>: <DateFormat value={order.conversion_rate} />
+            <span>Conversion Rate</span>: {order.conversion_rate}
           </p>
           <p>
             <span>PO#</span>: {order.order_details[0].purchase_order_id}
