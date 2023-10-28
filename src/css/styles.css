@@ -187,6 +187,8 @@ header h1 span {
   font-weight: normal;
   transform: rotate(-1deg);
   text-transform: none;
+  top: 0px;
+  left: 150px
 }
 
 header nav {
