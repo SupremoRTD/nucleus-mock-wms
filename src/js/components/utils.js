@@ -26,3 +26,12 @@ export function NumberFormat({ value, currency }) {
     </>
   )
 }
+
+export function DateFormat({ value }) {
+  const date = new Date(value)
+  return (
+    <>
+      {`${date.toLocaleDateString()} @ ${date.toLocaleTimeString()}`}
+    </>
+  )
+}

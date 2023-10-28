@@ -25,6 +25,11 @@ export function Layout() {
                 Invoices
               </NavLink>
             </li>
+            <li>
+              <NavLink className={({ isActive }) => (isActive ? 'active' : undefined)} to='/orders'>
+                Orders
+              </NavLink>
+            </li>
           </ul>
         </nav>
       </header>

@@ -54,4 +54,5 @@ export default {
   }),
   vendors: VENDORS,
   purchaseOrders: PURCHASE_ORDERS,
+  orders: ORDERS
 }
