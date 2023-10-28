@@ -399,12 +399,15 @@ header nav ul li a:hover,
     text-shadow: 0px 2px var(--swatch3);
   }
 
-  /* Invoices Styling */
-  #invoices tbody tr td:last-of-type {
+  /* Shared Stylings */
+  #vendors tbody tr td:last-of-type,
+  #invoices tbody tr td:last-of-type,
+  #orders tbody tr td:last-of-type {
     text-align: unset;
     padding: 10px 0 10px 40%;
   }
 
+  /* Invoices Styling */
   #invoices td:nth-of-type(1):before {
     content: 'ID';
   }
@@ -462,6 +465,10 @@ header nav ul li a:hover,
     content: 'Total COGS';
   }
 
+  #invoice-items td:nth-of-type(8):before {
+    content: '';
+  }
+
   /* Vendor Styling */
   #vendors td:nth-of-type(1):before {
     content: 'ID';
@@ -487,6 +494,10 @@ header nav ul li a:hover,
     content: 'Active Status';
   }
 
+  #vendors td:nth-of-type(7):before {
+    content: ''
+  }
+
   /* Order Styling */
   #orders td:nth-of-type(1):before {
     content: 'ID';
@@ -510,6 +521,10 @@ header nav ul li a:hover,
 
   #orders td:nth-of-type(5):before {
     content: 'Conversion Rate';
+  }
+
+  #orders td:nth-of-type(6):before {
+    content: '';
   }
 
   /* Order Items Styling */
