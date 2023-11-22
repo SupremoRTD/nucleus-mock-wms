@@ -33,7 +33,7 @@ export function Layout() {
           </ul>
         </nav>
         <div id="github-logo">
-          <a href="https://github.com/SupremoRTD/nucleus-mock-wms">
+          <a href="https://github.com/aataxe/nucleus-mock-wms">
             <img src="/images/github-mark.svg" />
           </a>
         </div>
