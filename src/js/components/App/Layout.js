@@ -7,34 +7,44 @@ export function Layout() {
     <>
       <header>
         <img src='../images/logo.png' />
-        <h1>Nucleus <span>Mock</span></h1>
+        <h1>
+          Nucleus <span>Mock</span>
+        </h1>
         <nav>
           <ul>
             <li>
-              <NavLink className={({ isActive }) => (isActive ? 'active' : undefined)} to='/'>
+              <NavLink
+                className={({ isActive }) => (isActive ? 'active' : undefined)}
+                to='/'>
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink className={({ isActive }) => (isActive ? 'active' : undefined)} to='/vendors'>
+              <NavLink
+                className={({ isActive }) => (isActive ? 'active' : undefined)}
+                to='/vendors'>
                 Vendors
               </NavLink>
             </li>
             <li>
-              <NavLink className={({ isActive }) => (isActive ? 'active' : undefined)} to='/invoices'>
+              <NavLink
+                className={({ isActive }) => (isActive ? 'active' : undefined)}
+                to='/invoices'>
                 Invoices
               </NavLink>
             </li>
             <li>
-              <NavLink className={({ isActive }) => (isActive ? 'active' : undefined)} to='/orders'>
+              <NavLink
+                className={({ isActive }) => (isActive ? 'active' : undefined)}
+                to='/orders'>
                 Orders
               </NavLink>
             </li>
           </ul>
         </nav>
-        <div id="github-logo">
-          <a href="https://github.com/aataxe/nucleus-mock-wms">
-            <img src="/images/github-mark.svg" />
+        <div id='github-logo'>
+          <a href='https://github.com/aatxxe/nucleus-mock-wms'>
+            <img src='/images/github-mark.svg' />
           </a>
         </div>
       </header>
